@@ -1,6 +1,51 @@
 package main
 
+import "fmt"
+
+type Product struct {
+	id    string
+	title string
+	price float64
+}
+
 func main() {
+	var hobbies [3]string = [3]string{"Learning", "Video games", "Programming"}
+
+	// Task 1
+	fmt.Println(hobbies)
+
+	// Task 2
+	fmt.Println(hobbies[0])
+	fmt.Println(hobbies[1:])
+
+	// Task 3
+	hobbiesTaskThree := hobbies[:2]
+	// hobbiesTaskThree := hobbies[0:2]
+
+	fmt.Println(hobbiesTaskThree)
+
+	// Task 4
+	hobbiesTaskFour := hobbiesTaskThree[1:]
+	hobbiesTaskFour = append(hobbiesTaskFour, hobbies[2])
+
+	fmt.Println(hobbiesTaskFour)
+
+	// Task 5
+	courseGoals := []string{"Learn GO", "Create an API with GO"}
+	fmt.Println(courseGoals)
+
+	// Task 6
+	courseGoals[1] = "Get better at arrays"
+	courseGoals = append(courseGoals, "Do more exercises with GO")
+
+	fmt.Println(courseGoals)
+
+	// Task 7
+
+	productList := []Product{{id: "1", title: "Cellphone", price: 99.99}, {id: "2", title: "Remote Control", price: 25.32}}
+	productList = append(productList, Product{id: "3", title: "Battery", price: 5})
+
+	fmt.Println(productList)
 
 }
 
